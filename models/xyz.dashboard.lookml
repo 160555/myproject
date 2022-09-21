@@ -8,7 +8,7 @@
   elements:
   - title: xyz
     name: xyz
-    model: khushi_demo
+    model: /models/khushi_demo.model.lkml
     explore: covid19
     type: looker_grid
     fields: [covid19.active, covid19.admin2]
@@ -47,7 +47,7 @@
     ui_config:
       type: checkboxes
       display: popover
-    model: khushi_demo
+    model: /models/khushi_demo.model.lkml
     explore: covid19
     listens_to_filters: []
     field: covid19.country_region

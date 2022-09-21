@@ -3,12 +3,6 @@ connection: "khushi166"
 # include all the views
 include: "/views/**/*.view"
 
-datagroup: khushi_demo_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
-}
-
-persist_with: khushi_demo_default_datagroup
 
 explore: migration {}
 
@@ -17,12 +11,7 @@ explore: aj_demo {}
 explore: college_details_aj {}
 
 explore: product_batch2 {
-  label: "ordered"
-  join: product_test {
-    type: left_outer
-    relationship: one_to_one
-    sql_on: ${product_batch2.ordered_quantity} =${product_test.ordered_quantity} ;;
-  }
+
 }
 
 explore: pub_sub_sidhu_error_records {
@@ -65,7 +54,14 @@ explore: practicepubsubtobigquery {}
 
 explore: dynamodbbqoutput_test {}
 
-explore: product_test {}
+explore: product_test{
+  label: "view"
+  join: view1 {
+    type:inner
+    relationship: many_to_one
+    sql_on: ${product_test.name}=${view1.name};;
+  }
+}
 
 explore: pubsub_demo {}
 

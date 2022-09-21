@@ -1,13 +1,13 @@
-- dashboard: xyz
-  title: xyz
+- dashboard: mydash1
+  title: mydash1
   layout: newspaper
   preferred_viewer: dashboards
   crossfilter_enabled: true
   description: ''
   preferred_slug: xKUhLMKPy5iX2GywruMoRR
   elements:
-  - title: xyz
-    name: xyz
+  - title: mydash1
+    name: mydash1
     model: /models/khushi_demo.model.lkml
     explore: covid19
     type: looker_grid

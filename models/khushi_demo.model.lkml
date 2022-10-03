@@ -4,7 +4,9 @@ connection: "khushi166"
 include: "/views/**/*.view"
 
 
-explore: migration {}
+explore: migration {
+
+}
 
 explore: aj_demo {}
 

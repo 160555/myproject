@@ -14,6 +14,7 @@ view: product_batch2 {
 
   dimension: restocking_lead_time {
     type: number
+    required_access_grants: [restocking_lead_time]
     sql: ${TABLE}.restockingLeadTime ;;
   }
 

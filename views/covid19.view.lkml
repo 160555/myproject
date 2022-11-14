@@ -53,7 +53,7 @@ view: covid19 {
   }
 
   dimension: latitude {
-    type: number
+    type:string
     sql: ${TABLE}.latitude ;;
   }
 
@@ -63,7 +63,7 @@ view: covid19 {
   }
 
   dimension: longitude {
-    type: number
+    type: string
     sql: ${TABLE}.longitude ;;
   }
 

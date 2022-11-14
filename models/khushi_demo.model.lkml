@@ -7,7 +7,10 @@ include: "/views/**/*.view"
 explore: migration {
 
 }
-
+access_grant: restocking_lead_time{
+  user_attribute:restocking_lead_time
+  allowed_values: ["14","15","16"]
+}
 explore: aj_demo {}
 
 explore: college_details_aj {}

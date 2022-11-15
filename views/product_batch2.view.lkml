@@ -9,8 +9,7 @@ view: product_batch2 {
 
   dimension: ordered_quantity {
     type: number
-    html: <img src="https://www.brettcase.com/
-          product_images/{{ value }}.jpg"/> ;;
+
     sql: ${TABLE}.orderedQuantity ;;
   }
 
@@ -28,6 +27,11 @@ view: product_batch2 {
   dimension: stock_level {
     type: number
     sql: ${TABLE}.stockLevel ;;
+  }
+  dimension: myimg {
+
+    html: <img src="https://cdn.pixabay.com/photo/2016/03/21/23/25/link-1271843_1280.png/{{ value }}.jpg"/> ;;
+    sql: ${TABLE}.myimg;;
   }
 
   measure: count {

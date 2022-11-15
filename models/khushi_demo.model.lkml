@@ -9,8 +9,9 @@ explore: migration {
 }
 access_grant: restocking_lead_time{
   user_attribute:restocking_lead_time
-  allowed_values: ["14","15","16"]
+  allowed_values: ["14","15","16","17"]
 }
+
 explore: aj_demo {}
 
 explore: college_details_aj {}

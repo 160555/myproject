@@ -9,6 +9,8 @@ view: product_batch2 {
 
   dimension: ordered_quantity {
     type: number
+    html: <img src="https://www.brettcase.com/
+          product_images/{{ value }}.jpg"/> ;;
     sql: ${TABLE}.orderedQuantity ;;
   }
 
@@ -30,6 +32,14 @@ view: product_batch2 {
 
   measure: count {
     type: count
+    html:
+    {% if value > 100 %}
+      <span style="color:darkgreen;">{{ rendered_value }}</span>
+    {% elsif value > 50 %}
+      <span style="color:goldenrod;">{{ rendered_value }}</span>
+    {% else %}
+      <span style="color:darkred;">{{ rendered_value }}</span>
+    {% endif %} ;;
     drill_fields: [name]
   }
 }

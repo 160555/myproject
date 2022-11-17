@@ -61,12 +61,7 @@ explore: practicepubsubtobigquery {}
 explore: dynamodbbqoutput_test {}
 
 explore: product_test{
-  label: "view"
-  join: view1 {
-    type:inner
-    relationship: many_to_one
-    sql_on: ${product_test.name}=${view1.name};;
-  }
+
 }
 
 explore: pubsub_demo {}

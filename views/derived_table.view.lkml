@@ -1,15 +1,11 @@
 view: derived_table {
   derived_table: {
-    explore_source: covid19 {
-      column:country_region {
-        field: covid19.country_region
-      }
-
-    }
+    sql: select country_region from covid19 ;;
   }
 
   dimension: country_region {
       type: string
+      primary_key: yes
       sql: ${country_region} ;;
       html:
           {% if state._value == "California" %}
